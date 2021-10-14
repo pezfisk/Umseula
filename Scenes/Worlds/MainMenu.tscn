@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://PlayerSprites/tile000.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Worlds/Quit.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Worlds/start.gd" type="Script" id=4]
+[ext_resource path="res://Images/MainMenu/aboutPixel.png" type="Texture" id=5]
+[ext_resource path="res://Images/MainMenu/quitPixel.png" type="Texture" id=6]
+[ext_resource path="res://Images/MainMenu/startPixel.png" type="Texture" id=7]
+[ext_resource path="res://Shaders/outline.shader" type="Shader" id=8]
+[ext_resource path="res://Scenes/OtherStuff/TileMap3.tscn" type="PackedScene" id=9]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 8 )
+shader_param/outline_width = 0.01
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource( 9 )]
+position = Vector2( -52.322, 211.88 )
+tile_data = PoolIntArray( -917502, 0, 0, -917501, 0, 2, -917482, 0, 0, -917481, 0, 2, -851966, 0, 65536, -851965, 0, 65538, -851946, 0, 65536, -851945, 0, 65538, -786430, 0, 65536, -786429, 0, 65538, -786410, 0, 65536, -786409, 0, 65538, -720894, 0, 65536, -720893, 0, 65538, -720888, 0, 0, -720887, 0, 1, -720886, 0, 1, -720885, 0, 1, -720884, 0, 1, -720883, 0, 1, -720882, 0, 1, -720881, 0, 1, -720880, 0, 2, -720874, 0, 65536, -720873, 0, 65538, -655358, 0, 65536, -655357, 0, 65538, -655352, 0, 131072, -655351, 0, 131073, -655350, 0, 131073, -655349, 0, 131073, -655348, 0, 131073, -655347, 0, 131073, -655346, 0, 131073, -655345, 0, 131073, -655344, 0, 131074, -655338, 0, 65536, -655337, 0, 65538, -589822, 0, 65536, -589821, 0, 65538, -589802, 0, 65536, -589801, 0, 65538, -524286, 0, 65536, -524285, 0, 65538, -524269, 2, 0, -524266, 0, 65536, -524265, 0, 65538, -458750, 0, 65536, -458749, 0, 65538, -458733, 2, 65536, -458730, 0, 65536, -458729, 0, 65538, -393214, 0, 65536, -393213, 0, 65538, -393210, 2, 0, -393197, 2, 65536, -393194, 0, 65536, -393193, 0, 65538, -327678, 0, 65536, -327677, 0, 65538, -327674, 2, 65536, -327661, 2, 65536, -327658, 0, 65536, -327657, 0, 65538, -262142, 0, 65536, -262141, 0, 65538, -262138, 2, 65536, -262125, 2, 65536, -262122, 0, 65536, -262121, 0, 65538, -196606, 0, 65536, -196605, 0, 65537, -196604, 0, 1, -196603, 0, 1, -196602, 0, 1, -196601, 0, 1, -196600, 0, 1, -196599, 0, 1, -196598, 0, 1, -196597, 0, 1, -196596, 0, 1, -196595, 0, 1, -196594, 0, 1, -196593, 0, 1, -196592, 0, 1, -196591, 0, 1, -196590, 0, 1, -196589, 0, 1, -196588, 0, 1, -196587, 0, 1, -196586, 0, 65537, -196585, 0, 65538, -131070, 0, 131072, -131069, 0, 131073, -131068, 0, 131073, -131067, 0, 131073, -131066, 0, 131073, -131065, 0, 131073, -131064, 0, 131073, -131063, 0, 131073, -131062, 0, 131073, -131061, 0, 131073, -131060, 0, 131073, -131059, 0, 131073, -131058, 0, 131073, -131057, 0, 131073, -131056, 0, 131073, -131055, 0, 131073, -131054, 0, 131073, -131053, 0, 131073, -131052, 0, 131073, -131051, 0, 131073, -131050, 0, 131073, -131049, 0, 131074, 458781, 0, 65537 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 160, 90 )
+scale = Vector2( -0.94802, 0.745184 )
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="Control" type="Control" parent="."]
+anchor_left = -0.428
+anchor_right = 1.719
+anchor_bottom = 1.0
+margin_left = 0.158982
+margin_top = -2.17972
+margin_right = 320.16
+margin_bottom = 177.82
+grow_horizontal = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 1 )
+position = Vector2( 52.1401, 103.708 )
+scale = Vector2( 1.00975, 1.00975 )
+texture = ExtResource( 2 )
+
+[node name="Start" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 115.0
+margin_top = 64.0
+margin_right = 2162.0
+margin_bottom = 1070.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_scale = Vector2( 0.04, 0.043 )
+text = "Start!"
+icon = ExtResource( 7 )
+flat = true
+expand_icon = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="Button" parent="."]
+margin_left = 238.0
+margin_top = 133.0
+margin_right = 2263.0
+margin_bottom = 1156.0
+rect_scale = Vector2( 0.04, 0.043 )
+shortcut_in_tooltip = false
+text = "About"
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 115.0
+margin_top = 111.0
+margin_right = 2157.0
+margin_bottom = 1117.0
+rect_scale = Vector2( 0.04, 0.043 )
+text = "Quit"
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Start" to="Start" method="_on_Button_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_Button3_pressed"]

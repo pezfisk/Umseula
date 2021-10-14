@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/Movement Keys/RightKey.png" type="Texture" id=1]
+[ext_resource path="res://Images/Movement Keys/Left.png" type="Texture" id=2]
+[ext_resource path="res://Images/Movement Keys/UpKey.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Player/MobileControlls.gd" type="Script" id=4]
+
+[node name="MobileControlls" type="Node2D"]
+light_mask = 2
+z_index = 1
+script = ExtResource( 4 )
+
+[node name="Left" type="TouchScreenButton" parent="."]
+position = Vector2( -145.747, 32.9763 )
+scale = Vector2( 0.345318, 0.345318 )
+normal = ExtResource( 2 )
+shape_centered = false
+shape_visible = false
+visibility_mode = 1
+
+[node name="Right" type="TouchScreenButton" parent="."]
+position = Vector2( -86.433, 32.976 )
+scale = Vector2( 0.345318, 0.345318 )
+normal = ExtResource( 1 )
+shape_centered = false
+shape_visible = false
+visibility_mode = 1
+
+[node name="Up" type="TouchScreenButton" parent="."]
+position = Vector2( 101.039, 32.976 )
+scale = Vector2( 0.345318, 0.345318 )
+normal = ExtResource( 3 )
+shape_centered = false
+shape_visible = false
+visibility_mode = 1
+[connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
+[connection signal="released" from="Left" to="." method="_on_Left_released"]
+[connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
+[connection signal="released" from="Right" to="." method="_on_Right_released"]
+[connection signal="pressed" from="Up" to="." method="_on_Up_pressed"]
+[connection signal="released" from="Up" to="." method="_on_Up_released"]

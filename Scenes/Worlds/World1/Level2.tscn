@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/OtherStuff/DeathArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/OtherStuff/TestSpike2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/OtherStuff/MobileControlls.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/OtherStuff/TileMap3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/OtherStuff/NextLevel.tscn" type="PackedScene" id=7]
+
+[node name="Level_2_World_1" type="Node"]
+
+[node name="Spikes2" type="Node2D" parent="."]
+
+[node name="Spike" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( 219.5, -20.0046 )
+
+[node name="Spike2" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( 130.007, -84.0046 )
+
+[node name="Spike3" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( 105.499, -180 )
+
+[node name="Spike4" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( 137.495, -228 )
+
+[node name="Spike5" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( 215.007, -276.005 )
+
+[node name="Spike6" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -171, -116 )
+
+[node name="Spike7" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -312, -180 )
+
+[node name="Spike8" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -193.993, -260 )
+
+[node name="Spike9" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -72, -147.995 )
+
+[node name="Spike10" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -64, -147.995 )
+
+[node name="Spike11" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -56, -148 )
+
+[node name="Spike12" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -71.9803, -219.971 )
+rotation = -3.14176
+
+[node name="Spike13" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -63.9803, -219.971 )
+rotation = -3.14176
+
+[node name="Spike14" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( -55.9802, -219.976 )
+rotation = -3.14176
+
+[node name="Spike15" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( 12, -263.285 )
+rotation = -1.5708
+
+[node name="Spike16" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( 12, -272.237 )
+rotation = -1.5708
+
+[node name="Spike17" parent="Spikes2" instance=ExtResource( 3 )]
+position = Vector2( 12, -281.184 )
+rotation = -1.5708
+
+[node name="Limits" type="Node2D" parent="."]
+
+[node name="Area2D" parent="Limits" instance=ExtResource( 2 )]
+position = Vector2( 17, 111 )
+
+[node name="Area2D2" parent="Limits" instance=ExtResource( 2 )]
+position = Vector2( -467, -1030 )
+rotation = 1.57079
+
+[node name="Area2D3" parent="Limits" instance=ExtResource( 2 )]
+position = Vector2( 556, -1019 )
+rotation = 1.57079
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -16, 48 )
+
+[node name="MobileControlls" parent="Player" instance=ExtResource( 5 )]
+visible = false
+
+[node name="NextLevel" parent="." instance=ExtResource( 7 )]
+position = Vector2( 213, -450 )
+next_world = "res://Scenes/Worlds/World1/Level3.tscn"
+
+[node name="TileMap2" parent="." instance=ExtResource( 6 )]
+tile_data = PoolIntArray( -2752502, 0, 0, -2752501, 0, 2, -2686966, 0, 65536, -2686965, 0, 65538, -2621430, 0, 65536, -2621429, 0, 65538, -2555894, 0, 65536, -2555893, 0, 65538, -2490358, 0, 65536, -2490357, 0, 65538, -2424822, 0, 65536, -2424821, 0, 65538, -2359286, 0, 65536, -2359285, 0, 65538, -2293750, 0, 65536, -2293749, 0, 65538, -2228214, 0, 65536, -2228213, 0, 65538, -2162678, 0, 65536, -2162677, 0, 65538, -2097142, 0, 65536, -2097141, 0, 65538, -2031606, 0, 65536, -2031605, 0, 65538, -1966070, 0, 65536, -1966069, 0, 65538, -1900534, 0, 65536, -1900533, 0, 65538, -1834998, 0, 65536, -1834997, 0, 65538, -1769462, 0, 65536, -1769461, 0, 65537, -1769460, 0, 1, -1769459, 0, 1, -1769458, 0, 2, -1703926, 0, 131072, -1703925, 0, 131073, -1703924, 0, 131073, -1703923, 0, 131073, -1703922, 0, 131074, -1572845, 0, 0, -1572844, 0, 1, -1572843, 0, 1, -1572842, 0, 2, -1507309, 0, 131072, -1507308, 0, 131073, -1507307, 0, 131073, -1507306, 0, 131074, -1376241, 2, 0, -1310705, 2, 65536, -1245173, 2, 0, -1245169, 2, 65536, -1179647, 0, 0, -1179646, 0, 1, -1179645, 0, 2, -1179637, 2, 131072, -1179633, 2, 131072, -1048581, 0, 0, -1048580, 0, 2, -1114111, 0, 131072, -1114110, 0, 131073, -1114109, 0, 131074, -1114103, 0, 0, -1114102, 0, 1, -1114101, 0, 1, -1114100, 0, 1, -1114099, 0, 1, -1114098, 0, 1, -1114097, 0, 1, -1114096, 0, 1, -1114095, 0, 2, -983054, 0, 0, -983053, 0, 1, -983052, 0, 1, -983051, 0, 2, -983045, 0, 65536, -983044, 0, 65538, -1048567, 0, 131072, -1048566, 0, 131073, -1048565, 0, 131073, -1048564, 0, 131073, -1048563, 0, 131073, -1048562, 0, 131073, -1048561, 0, 131073, -1048560, 0, 65537, -1048559, 0, 65538, -917519, 0, 0, -917518, 0, 65537, -917517, 0, 65537, -917516, 0, 131073, -917515, 0, 131074, -917509, 0, 131072, -917508, 0, 131074, -983024, 0, 65536, -983023, 0, 65538, -851983, 0, 131072, -851982, 0, 131073, -851981, 0, 131074, -917496, 2, 0, -917488, 0, 65536, -917487, 0, 65538, -851960, 2, 65536, -851952, 0, 65536, -851951, 0, 65538, -786424, 2, 131072, -786416, 0, 65536, -786415, 0, 65538, -655380, 0, 0, -655379, 0, 1, -655378, 0, 1, -655377, 0, 2, -720890, 2, 0, -720880, 0, 65536, -720879, 0, 65538, -589844, 0, 131072, -589843, 0, 131073, -589842, 0, 131073, -589841, 0, 131074, -655354, 2, 131072, -655344, 0, 65536, -655343, 0, 65538, -524293, 0, 0, -524292, 0, 2, -589808, 0, 65536, -589807, 0, 65538, -458765, 0, 0, -458764, 0, 2, -458757, 0, 65536, -458756, 0, 65538, -524272, 0, 65536, -524271, 0, 65538, -393229, 0, 65536, -393228, 0, 65537, -393227, 0, 1, -393226, 0, 1, -393225, 0, 1, -393224, 0, 2, -393221, 0, 65536, -393220, 0, 65538, -458752, 0, 0, -458751, 0, 1, -458750, 0, 2, -458736, 0, 65536, -458735, 0, 65538, -327693, 0, 131072, -327692, 0, 131073, -327691, 0, 131073, -327690, 0, 131073, -327689, 0, 131073, -327688, 0, 131074, -327685, 0, 65536, -327684, 0, 65538, -393216, 0, 131072, -393215, 0, 131073, -393214, 0, 131074, -393200, 0, 65536, -393199, 0, 65538, -262149, 0, 65536, -262148, 0, 65538, -327674, 0, 0, -327673, 0, 1, -327672, 0, 1, -327671, 0, 2, -327664, 0, 65536, -327663, 0, 65538, -196613, 0, 65536, -196612, 0, 65538, -262138, 0, 131072, -262137, 0, 131073, -262136, 0, 131073, -262135, 0, 131074, -262128, 0, 65536, -262127, 0, 65538, -131077, 0, 65536, -131076, 0, 65538, -196592, 0, 65536, -196591, 0, 65538, -65541, 0, 65536, -65540, 0, 65538, -131058, 0, 0, -131057, 0, 1, -131056, 0, 65537, -131055, 0, 65538, -5, 0, 65536, -4, 0, 65538, -65524, 0, 0, -65523, 0, 1, -65522, 0, 65537, -65521, 0, 65537, -65520, 0, 131073, -65519, 0, 131074, 65531, 0, 65536, 65532, 0, 65538, 12, 0, 131072, 13, 0, 131073, 14, 0, 131073, 15, 0, 131074, 131067, 0, 65536, 131068, 0, 65538, 196603, 0, 65536, 196604, 0, 65538, 131079, 0, 0, 131080, 0, 1, 131081, 0, 1, 131082, 0, 2, 262139, 0, 65536, 262140, 0, 65538, 196615, 0, 131072, 196616, 0, 131073, 196617, 0, 131073, 196618, 0, 131074, 327675, 0, 65536, 327676, 0, 65537, 327677, 0, 1, 327678, 0, 1, 327679, 0, 1, 262144, 0, 1, 262145, 0, 1, 262146, 0, 2, 393211, 0, 131072, 393212, 0, 131073, 393213, 0, 131073, 393214, 0, 131073, 393215, 0, 131073, 327680, 0, 131073, 327681, 0, 131073, 327682, 0, 131074 )
