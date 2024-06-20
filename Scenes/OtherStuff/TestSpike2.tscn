@@ -5,7 +5,7 @@
 [ext_resource path="res://Images/Spikes/SpikeTest2.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 2.97942
+radius = 0.992665
 
 [sub_resource type="Gradient" id=2]
 colors = PoolColorArray( 0.764706, 0.623529, 0.219608, 1, 0.352941, 0.352941, 0.352941, 1 )
@@ -38,11 +38,8 @@ color_ramp = SubResource( 3 )
 [node name="Spike" type="Area2D"]
 script = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.00734536, -0.00462151 )
-shape = SubResource( 1 )
-
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 9.31323e-10, 0 )
 texture = ExtResource( 1 )
 
@@ -51,11 +48,16 @@ position = Vector2( 0.00968956, -0.618156 )
 scale = Vector2( 0.561657, 0.581667 )
 texture = ExtResource( 3 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.00734536, -0.00462151 )
+shape = SubResource( 1 )
+
 [node name="Particles2D" type="Particles2D" parent="."]
 emitting = false
-amount = 224
+amount = 250
 lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource( 4 )
+
 [connection signal="body_entered" from="." to="." method="_on_Spike_body_entered"]

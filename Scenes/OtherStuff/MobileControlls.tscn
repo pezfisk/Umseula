@@ -33,6 +33,7 @@ normal = ExtResource( 3 )
 shape_centered = false
 shape_visible = false
 visibility_mode = 1
+
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="released" from="Left" to="." method="_on_Left_released"]
 [connection signal="pressed" from="Right" to="." method="_on_Right_pressed"]
