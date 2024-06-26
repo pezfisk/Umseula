@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/OtherStuff/TileMap.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/OtherStuff/DeathArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/OtherStuff/TempSky.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/OtherStuff/TileMap2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/OtherStuff/Turret.tscn" type="PackedScene" id=8]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 88.0975, 31.4596, 55.9755, -27.4009, -6.7244, 46.557, -101.281, 46.557, -102.076, 62.9787, -133.86, 79.1355, -134.125, 125.752, 56.0488, 126.546, 87.5678, 110.654 )
@@ -127,3 +128,6 @@ tile_data = PoolIntArray( -589836, 2, 0, -524300, 2, 0, -393229, 3, 65537, -3932
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -38.5314, -16.0362 )
 process_material = SubResource( 2 )
+
+[node name="Turret" parent="." instance=ExtResource( 8 )]
+position = Vector2( -122, 28 )

@@ -39,7 +39,6 @@ color_ramp = SubResource( 3 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-visible = false
 position = Vector2( 9.31323e-10, 0 )
 texture = ExtResource( 1 )
 
