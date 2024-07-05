@@ -21,3 +21,4 @@ shape = SubResource( 1 )
 
 [connection signal="body_entered" from="Detection" to="." method="_on_Detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_Detection_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -85,7 +85,10 @@ rotation = -3.14159
 position = Vector2( 169, 28 )
 
 [node name="Turret" parent="Spikes" instance=ExtResource( 10 )]
-position = Vector2( 234, -372 )
+position = Vector2( 233, -372 )
+
+[node name="Turret2" parent="Spikes" instance=ExtResource( 10 )]
+position = Vector2( -299, -228 )
 
 [node name="Limits" type="Node2D" parent="."]
 
