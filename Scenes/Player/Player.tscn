@@ -45,12 +45,10 @@ script = ExtResource( 9 )
 visible = false
 
 [node name="Left" type="RayCast2D" parent="RayCast"]
-visible = false
 enabled = true
 cast_to = Vector2( -10, 0 )
 
 [node name="Right" type="RayCast2D" parent="RayCast"]
-visible = false
 enabled = true
 cast_to = Vector2( 10, 0 )
 
@@ -62,7 +60,6 @@ animation = "Jump"
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 rotating = true
 current = true
 zoom = Vector2( 0.25, 0.25 )

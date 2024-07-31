@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Images/Movement Keys/RightKey.png" type="Texture" id=1]
 [ext_resource path="res://Images/Movement Keys/Left.png" type="Texture" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://Images/Movement Keys/LeftPressed.png" type="Texture" id=5]
 [ext_resource path="res://Images/Movement Keys/RightKeyPressed.png" type="Texture" id=6]
 [ext_resource path="res://Images/Movement Keys/UpKeyPressed.png" type="Texture" id=7]
+[ext_resource path="res://Roboto-Medium.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 8 )
 
 [node name="MobileControlls" type="Node2D"]
 light_mask = 2
@@ -25,7 +30,7 @@ visibility_mode = 1
 
 [node name="Right" type="TouchScreenButton" parent="."]
 position = Vector2( -86.433, 32.976 )
-scale = Vector2( 0.345318, 0.345318 )
+scale = Vector2( 0.345, 0.345 )
 normal = ExtResource( 1 )
 pressed = ExtResource( 6 )
 shape_centered = false
@@ -41,6 +46,20 @@ pressed = ExtResource( 7 )
 shape_centered = false
 shape_visible = false
 visibility_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotating = true
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -14.0
+margin_top = -87.0
+margin_right = 198.0
+margin_bottom = -58.0
+rect_scale = Vector2( 0.132554, 0.0986415 )
+custom_fonts/font = SubResource( 1 )
+align = 1
 
 [connection signal="pressed" from="Left" to="." method="_on_Left_pressed"]
 [connection signal="released" from="Left" to="." method="_on_Left_released"]
