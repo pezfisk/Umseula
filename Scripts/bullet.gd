@@ -7,15 +7,18 @@ var startAnim : bool = true
 onready var part = $Particles2D
 
 func _physics_process(delta):
-	var direction = (GLOBALS.player_pos - global_position).normalized()
+	# var direction = (GLOBALS.player_pos - global_position).normalized()
 	if not stopLook:
 		look_at(GLOBALS.player_pos)
 		
 	if startAnim:
 		position.y -= delta * 60
+		
 		self.global_rotation_degrees = -90
+		
 	else:
 		position += transform.x * speed * delta
+		
 		if speed < 300:
 			speed += 1
 	

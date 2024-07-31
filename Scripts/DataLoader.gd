@@ -1,7 +1,7 @@
 extends Node
 
 # Path to save file 
-var file= "res://Config.cfg"
+var file= "user://Config.cfg"
 
 func getData():
 	var configFile = ConfigFile.new()
