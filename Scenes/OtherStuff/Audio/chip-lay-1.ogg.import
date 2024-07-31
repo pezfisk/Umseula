@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/chip-lay-1.ogg-967cbc56c9e4079ba952cca89c1646be.oggstr"
+
+[deps]
+
+source_file="res://Scenes/OtherStuff/Audio/chip-lay-1.ogg"
+dest_files=[ "res://.import/chip-lay-1.ogg-967cbc56c9e4079ba952cca89c1646be.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

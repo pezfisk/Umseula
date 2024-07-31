@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cards-pack-open-2.ogg-f86e9080dbc6b12adaea21cc0139a57d.oggstr"
+
+[deps]
+
+source_file="res://Scenes/OtherStuff/Audio/cards-pack-open-2.ogg"
+dest_files=[ "res://.import/cards-pack-open-2.ogg-f86e9080dbc6b12adaea21cc0139a57d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dice-grab-2.ogg-18c59e55da6684d4ab34292708b9370f.oggstr"
+
+[deps]
+
+source_file="res://Scenes/OtherStuff/Audio/dice-grab-2.ogg"
+dest_files=[ "res://.import/dice-grab-2.ogg-18c59e55da6684d4ab34292708b9370f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

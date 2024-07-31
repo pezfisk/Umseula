@@ -27,11 +27,10 @@ func _ready():
 	max_fall_speed = GLOBALS.max_fall_speed
 	$NextLevel.visible = false
 	AnimS.play('Jump')
+	
+	DataParser.levelSave()
 
 func _process(_delta):
-	
-	GLOBALS.player_pos = self.global_position
-	
 	if Input.is_action_just_pressed("debug"):
 		Debug = true
 	if Input.is_action_just_pressed("dissableDebug"):
@@ -41,6 +40,9 @@ func _process(_delta):
 		death()
 
 func _physics_process(_delta):
+	
+	GLOBALS.player_pos = self.global_position
+	
 	if Debug == false:
 		motion.y += gravity
 		motion.y = min(motion.y, max_fall_speed)
@@ -63,8 +65,10 @@ func _physics_process(_delta):
 		if is_on_floor():
 			if Input.is_action_just_pressed("ui_up"):
 				motion.y = jump_force
+				jump_count += 1
 		else:
 			AnimS.play('Jump')
+		
 		if not _pressing_movement() and not dead:
 			if is_on_floor():
 				AnimS.play('Idle')

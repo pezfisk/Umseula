@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dice-shake-3.ogg-880af57f7a72e33719ac826281d85a01.oggstr"
+
+[deps]
+
+source_file="res://Scenes/OtherStuff/Audio/dice-shake-3.ogg"
+dest_files=[ "res://.import/dice-shake-3.ogg-880af57f7a72e33719ac826281d85a01.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

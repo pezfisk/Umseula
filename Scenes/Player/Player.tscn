@@ -68,7 +68,7 @@ current = true
 zoom = Vector2( 0.25, 0.25 )
 
 [node name="Collision" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 8, 10, -8, 10, 0, -10 )
+polygon = PoolVector2Array( 8, 10, -8, 10, 0, -6 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

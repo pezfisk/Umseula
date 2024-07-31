@@ -8,11 +8,53 @@ follow_viewport_enable = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 follow_viewport_enable = true
-scroll_offset = Vector2( 0.2, 0.2 )
-scroll_base_offset = Vector2( 0.2, 0.2 )
-scroll_base_scale = Vector2( 0.2, 0.2 )
+scroll_base_scale = Vector2( 0.1, 0.05 )
 scroll_ignore_camera_zoom = true
 
-[node name="Sky" type="Sprite" parent="ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color( 0.933333, 0.933333, 0.933333, 1 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.933333, 0.933333, 0.933333, 1 )
+position = Vector2( -2.84217e-14, 1416 )
+scale = Vector2( -3, -1.891 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.933333, 0.933333, 0.933333, 1 )
+position = Vector2( 9.53674e-07, -1416 )
+scale = Vector2( -3, -1.891 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.933333, 0.933333, 0.933333, 1 )
+position = Vector2( -1750, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.933333, 0.933333, 0.933333, 1 )
+position = Vector2( 1750, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}

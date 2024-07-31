@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/card-shove-3.ogg-ee35cff06b7a66cc484ccd9a0f2a0aab.oggstr"
+
+[deps]
+
+source_file="res://Scenes/OtherStuff/Audio/card-shove-3.ogg"
+dest_files=[ "res://.import/card-shove-3.ogg-ee35cff06b7a66cc484ccd9a0f2a0aab.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

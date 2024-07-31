@@ -1,58 +1,51 @@
 extends Node
 
 # Path to save file 
-var file= "user://Config.cfg"
-
-# GLOBAL VARIABLES
-var speed = 25
-var max_speed = 150
-var gravity = 10
-var jump_force = -300
-var max_fall_speed = 750
+var file= "res://Config.cfg"
 
 func getData():
 	var configFile = ConfigFile.new()
-	
-	# Check if theres a GunConfig file already, so it doesnt get overwritten
-		
+
 	return configFile.get_sections()
 
 func SaveData(Header : String, Adress : String, Value): 
-	
+
 	var configFile = ConfigFile.new()
-	
-	# Add values to file 
+
 	configFile.set_value(Header,Adress,Value)
  
-	# Save file 
 	configFile.save(file)
 
 func loadData(Header : String, Adress : String): 
 
-	# Initiate ConfigFile  
+	var configFile = ConfigFile.new() 
 
-	var configFile= ConfigFile.new() 
-
-	# Load file 
 	configFile.load(file) 
 
-	# ----------
 	var loadedData 
 
-	# METHOD 
 	if (configFile.has_section(Header)): 
-		if (configFile.has_section_key(Header, Adress)): 
-			# Get data value
+		if (configFile.has_section_key(Header, Adress)):
+			
 			loadedData = configFile.get_value(Header, Adress)
+
 			if loadedData == null:
 				pass
+
 			return loadedData
-			
+
 		else:
 			push_warning("Has no section key (Adress doesn't exist)! - Section Key requested: " + Adress)
 	else:
 		push_warning("Has no section (Header doesn't exist)! - Section requested: " + Header)
-#
+
+func levelSave():
+	var current_level : String = str(get_tree().get_current_scene())
+
+	var levelString = current_level.split(":", true, 1)
+	
+	DataParser.SaveData("WorldSave", "currentWorld", levelString[0])
+
 #func getCurrentGun():
 #	var guns = getData()
 #	var i = 0

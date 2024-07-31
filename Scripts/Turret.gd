@@ -8,7 +8,8 @@ onready var timer = $Timer
 func _on_Detection_body_entered(body):
 	if body.is_in_group("player"):
 		inZone = true
-		shoot()
+		if timer.is_stopped():
+			shoot()
 
 func _on_Detection_body_exited(body):
 	if inZone and body.is_in_group("player"):
@@ -17,11 +18,9 @@ func _on_Detection_body_exited(body):
 func shoot():
 	var b = bullet.instance()
 	add_child(b)
-	b.global_position = self.position
+	b.global_position = self.global_position
 	timer.start(2)
 
 func _on_Timer_timeout():
-	print("Stopped!")
 	if inZone:
 		shoot()
-

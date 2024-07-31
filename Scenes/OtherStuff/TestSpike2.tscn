@@ -10,7 +10,7 @@ radius = 0.992665
 [sub_resource type="Gradient" id=2]
 colors = PoolColorArray( 0.764706, 0.623529, 0.219608, 1, 0.352941, 0.352941, 0.352941, 1 )
 
-[sub_resource type="GradientTexture" id=3]
+[sub_resource type="GradientTexture" id=5]
 gradient = SubResource( 2 )
 
 [sub_resource type="ParticlesMaterial" id=4]
@@ -33,7 +33,7 @@ angle = 720.0
 angle_random = 1.0
 scale = 1.5
 scale_random = 1.0
-color_ramp = SubResource( 3 )
+color_ramp = SubResource( 5 )
 
 [node name="Spike" type="Area2D"]
 script = ExtResource( 2 )

@@ -5,6 +5,7 @@ var input = []
 var debug = ["left","left","left","left","up"]
 var disableDebug = ["right","right","right","right","up"]
 
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	
 	if input.size() > 5:
@@ -22,11 +23,7 @@ func _physics_process(delta):
 	
 	if input == disableDebug:
 		Input.action_press("dissableDebug")
-	
-	
-	print(input)
-
-
 
 func _on_Timer_timeout():
-	input.remove(0)
+	if input.size() > 0:
+		input.remove(0)

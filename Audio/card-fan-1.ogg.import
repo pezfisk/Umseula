@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/card-fan-1.ogg-2f615fd999111cd37fcc13c186b311de.oggstr"
+
+[deps]
+
+source_file="res://Audio/card-fan-1.ogg"
+dest_files=[ "res://.import/card-fan-1.ogg-2f615fd999111cd37fcc13c186b311de.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

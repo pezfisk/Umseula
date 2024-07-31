@@ -103,11 +103,11 @@ position = Vector2( 0, 0.297302 )
 [node name="Light2D" type="Light2D" parent="Lights"]
 modulate = Color( 0.584314, 0, 0, 1 )
 self_modulate = Color( 0.529412, 0.286275, 0.286275, 1 )
-position = Vector2( -49.4896, -41.6719 )
+position = Vector2( -72, -26 )
 scale = Vector2( 1.83805, 1.83805 )
 z_as_relative = false
 texture = ExtResource( 3 )
-energy = 3.12
+energy = 0.72
 range_height = 1233.2
 shadow_enabled = true
 shadow_color = Color( 0.376471, 0.0196078, 0.0196078, 1 )
